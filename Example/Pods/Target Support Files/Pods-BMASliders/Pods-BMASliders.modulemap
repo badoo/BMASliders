@@ -1,0 +1,6 @@
+framework module BMASliders {
+  umbrella header "Pods-BMASliders-umbrella.h"
+
+  export *
+  module * { export * }
+}

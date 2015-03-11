@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfY-lA-kR2" userLabel="Container">
+                                <rect key="frame" x="16" y="40" width="343" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JZ-eM-gIF" customClass="BMALabeledRangeSlider">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="80"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="currentLowerValue">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="currentUpperValue">
+                                                <real key="value" value="70"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="step">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumDistance">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMALabeledRangeSlider" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqy-od-ENs">
+                                        <rect key="frame" x="101" y="2" width="140" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9JZ-eM-gIF" firstAttribute="top" secondItem="hfY-lA-kR2" secondAttribute="top" id="7gX-RQ-fCw"/>
+                                    <constraint firstAttribute="bottom" secondItem="9JZ-eM-gIF" secondAttribute="bottom" id="GYV-5h-pDY"/>
+                                    <constraint firstAttribute="centerX" secondItem="wqy-od-ENs" secondAttribute="centerX" id="IHx-Lh-BuQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="9JZ-eM-gIF" secondAttribute="trailing" id="Kfd-dl-4wo"/>
+                                    <constraint firstItem="9JZ-eM-gIF" firstAttribute="leading" secondItem="hfY-lA-kR2" secondAttribute="leading" id="QbD-as-Fjr"/>
+                                    <constraint firstItem="wqy-od-ENs" firstAttribute="top" secondItem="hfY-lA-kR2" secondAttribute="top" constant="2" id="bcE-3r-PLv"/>
+                                    <constraint firstAttribute="height" constant="80" id="pt5-On-OcN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUU-Fp-xBz" userLabel="Container">
+                                <rect key="frame" x="16" y="158" width="343" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-TS-Yv4" customClass="BMALabeledSlider">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMALabeledSlider" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acD-Io-UXJ">
+                                        <rect key="frame" x="119" y="2" width="104" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2YG-TS-Yv4" secondAttribute="trailing" id="3E7-hh-DnZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="2YG-TS-Yv4" secondAttribute="bottom" id="YjG-ci-VFB"/>
+                                    <constraint firstItem="acD-Io-UXJ" firstAttribute="top" secondItem="sUU-Fp-xBz" secondAttribute="top" constant="2" id="igD-42-bGU"/>
+                                    <constraint firstItem="2YG-TS-Yv4" firstAttribute="leading" secondItem="sUU-Fp-xBz" secondAttribute="leading" id="pDv-dM-Nws"/>
+                                    <constraint firstItem="2YG-TS-Yv4" firstAttribute="top" secondItem="sUU-Fp-xBz" secondAttribute="top" id="rCa-dw-mC7"/>
+                                    <constraint firstAttribute="centerX" secondItem="acD-Io-UXJ" secondAttribute="centerX" id="svB-lX-KjJ"/>
+                                    <constraint firstAttribute="height" constant="80" id="yAd-UD-CW1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfe-wY-UAW" userLabel="Container">
+                                <rect key="frame" x="16" y="276" width="343" height="105"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fX9-55-wp7" customClass="BMASlider">
+                                        <rect key="frame" x="8" y="60" width="283" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WTA-Et-E9t"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="300"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="step">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sliderDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="4O4-qj-bgL"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp1-Q9-sj9">
+                                        <rect key="frame" x="304" y="33" width="31" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1n-00-Nw7">
+                                        <rect key="frame" x="304" y="73" width="31" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Custom Layout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-vn-izd">
+                                        <rect key="frame" x="128" y="2" width="85" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0W-Pl-j80" customClass="BMARangeSlider">
+                                        <rect key="frame" x="8" y="20" width="283" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="aXB-O4-TRi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="currentLowerValue">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="currentUpperValue">
+                                                <real key="value" value="70"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="step">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumDistance">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rangeSliderDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="MYk-nk-Rq5"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fX9-55-wp7" firstAttribute="centerY" secondItem="W1n-00-Nw7" secondAttribute="centerY" id="3gb-2x-EIS"/>
+                                    <constraint firstItem="cp1-Q9-sj9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q0W-Pl-j80" secondAttribute="trailing" constant="2" id="ASP-OS-htb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q0W-Pl-j80" secondAttribute="trailing" priority="750" constant="52" id="Ham-fp-0Pq"/>
+                                    <constraint firstItem="Q0W-Pl-j80" firstAttribute="leading" secondItem="Qfe-wY-UAW" secondAttribute="leading" constant="8" id="Icc-Lz-AuE"/>
+                                    <constraint firstItem="Q0W-Pl-j80" firstAttribute="top" secondItem="Qfe-wY-UAW" secondAttribute="top" constant="20" id="QBL-z0-uYm"/>
+                                    <constraint firstAttribute="centerX" secondItem="ORE-vn-izd" secondAttribute="centerX" id="Rlc-g4-b8H"/>
+                                    <constraint firstItem="ORE-vn-izd" firstAttribute="top" secondItem="Qfe-wY-UAW" secondAttribute="top" constant="2" id="U2t-53-wyd"/>
+                                    <constraint firstAttribute="height" constant="105" id="XGz-a8-jYY"/>
+                                    <constraint firstItem="fX9-55-wp7" firstAttribute="top" secondItem="Q0W-Pl-j80" secondAttribute="bottom" id="bnX-Xv-KfC"/>
+                                    <constraint firstItem="cp1-Q9-sj9" firstAttribute="trailing" secondItem="W1n-00-Nw7" secondAttribute="trailing" id="hsw-rU-ovZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="cp1-Q9-sj9" secondAttribute="trailing" constant="8" id="kHm-gL-bqT"/>
+                                    <constraint firstItem="Q0W-Pl-j80" firstAttribute="leading" secondItem="fX9-55-wp7" secondAttribute="leading" id="pSG-4x-N02"/>
+                                    <constraint firstItem="cp1-Q9-sj9" firstAttribute="centerY" secondItem="Q0W-Pl-j80" secondAttribute="centerY" id="t8A-gO-Ow3"/>
+                                    <constraint firstItem="Q0W-Pl-j80" firstAttribute="trailing" secondItem="fX9-55-wp7" secondAttribute="trailing" id="ukm-1g-TWg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qfe-wY-UAW" firstAttribute="top" secondItem="sUU-Fp-xBz" secondAttribute="bottom" constant="38" id="4ww-KC-jKq"/>
+                            <constraint firstItem="sUU-Fp-xBz" firstAttribute="top" secondItem="hfY-lA-kR2" secondAttribute="bottom" constant="38" id="Ad2-Cd-X3M"/>
+                            <constraint firstItem="sUU-Fp-xBz" firstAttribute="leading" secondItem="Qfe-wY-UAW" secondAttribute="leading" id="BCp-1j-a1R"/>
+                            <constraint firstItem="hfY-lA-kR2" firstAttribute="leading" secondItem="sUU-Fp-xBz" secondAttribute="leading" id="PWB-BL-DSb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hfY-lA-kR2" secondAttribute="trailing" id="Tyb-Jn-ZZ8"/>
+                            <constraint firstItem="hfY-lA-kR2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Upz-9u-ovM"/>
+                            <constraint firstItem="hfY-lA-kR2" firstAttribute="height" secondItem="sUU-Fp-xBz" secondAttribute="height" id="Yiw-GP-2lS"/>
+                            <constraint firstItem="hfY-lA-kR2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aAz-hA-p4a"/>
+                            <constraint firstItem="hfY-lA-kR2" firstAttribute="trailing" secondItem="sUU-Fp-xBz" secondAttribute="trailing" id="eUF-Zv-sFt"/>
+                            <constraint firstItem="sUU-Fp-xBz" firstAttribute="trailing" secondItem="Qfe-wY-UAW" secondAttribute="trailing" id="h4Y-Bb-4XF"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="labeledRangeSlider" destination="9JZ-eM-gIF" id="xTR-aS-rNs"/>
+                        <outlet property="labeledSlider" destination="2YG-TS-Yv4" id="GDR-iM-acB"/>
+                        <outlet property="rangeSlider" destination="Q0W-Pl-j80" id="Hl1-vj-thu"/>
+                        <outlet property="rangeSliderLabel" destination="cp1-Q9-sj9" id="fIM-eh-8z1"/>
+                        <outlet property="slider" destination="fX9-55-wp7" id="Ofg-7v-CvR"/>
+                        <outlet property="sliderLabel" destination="W1n-00-Nw7" id="ke3-NR-x2p"/>
+                        <outletCollection property="containers" destination="hfY-lA-kR2" id="9EC-9C-uB7"/>
+                        <outletCollection property="containers" destination="sUU-Fp-xBz" id="jXu-ib-HQ1"/>
+                        <outletCollection property="containers" destination="Qfe-wY-UAW" id="Utf-ZM-SD8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="446"/>
+        </scene>
+    </scenes>
+</document>
