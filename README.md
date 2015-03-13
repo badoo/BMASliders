@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/badoo/BMASliders.svg?branch=master)](https://travis-ci.org/badoo/BMASliders)
-
-# BMASliders
+# BMASliders [![Build Status](https://api.travis-ci.org/badoo/BMASliders.svg?branch=1.0.0)](https://travis-ci.org/badoo/BMASliders)
 `BMASliders` is a set of reusable sliders. It includes two kind of sliders, one with customizable ranges -`BMARangeSlider`- and a simpler one -`BMASlider`- along with its labeled counterparts -`BMALabeledRangeSlider` and `BMALabeledSlider`
 
 <div align="center">
