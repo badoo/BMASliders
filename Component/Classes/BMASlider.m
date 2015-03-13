@@ -91,6 +91,7 @@
         frame->size.width = self.bounds.size.width;
     }];
     _backgroundRangeImageView.center = center;
+    _backgroundRangeImageView.frame = CGRectIntegral(_backgroundRangeImageView.frame);
     _backgroundRangeImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
 
     _slidingView = [[UIView alloc] init];
@@ -98,6 +99,7 @@
 
     _selectedRangeImageView = [[UIImageView alloc] init];
     _selectedRangeImageView.center = CGPointMake(0, center.y);
+    _selectedRangeImageView.frame = CGRectIntegral(_selectedRangeImageView.frame);
     _selectedRangeImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
 
     [self addSubview:self.slidingView];
