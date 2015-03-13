@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "BMASliders"
   s.version      = "1.0.0"
-  s.summary      = "Configurable range and simple sliders"
+  s.summary      = "Configurable range and simple sliders, IBInspectable and IBDesignable compatible"
   s.description  = <<-DESC
                    BMASliders` is a set of reusable sliders. It includes two kind of sliders, one with customizable ranges -`BMARangeSlider`- and a simpler one -`BMASlider`- along with its labeled counterparts -`BMALabeledRangeSlider` and `BMALabeledSlider` 				
                    DESC
