@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/badoo/BMASliders.svg?branch=master)](https://travis-ci.org/badoo/BMASliders)
+
 # BMASliders
 `BMASliders` is a set of reusable sliders. It includes two kind of sliders, one with customizable ranges -`BMARangeSlider`- and a simpler one -`BMASlider`- along with its labeled counterparts -`BMALabeledRangeSlider` and `BMALabeledSlider`
 
@@ -86,9 +88,13 @@ These are the non-labeled counterparts of `BMALabeledRangeSlider` and `BMALabele
 1. Make sure `use_frameworks!` is added to your `Podfile`. Live rendering with XIB-based views requires `use_frameworks!` to work, which is available from CocoaPods 0.36. If you don't add `use_frameworks!` in your `Podfile` live rendering won't work and you'll get some nasty complains in Interface Builder. However, everything should work fine at run time.
 
 2. Include the following line in your `Podfile`:
-   ```
-   pod 'TBD', :git => 'TBD'
-   ```
+    ```
+    pod 'BMASliders', '~> 1.0.0' 
+    ```
+If you like to live on the bleeding edge, you can use the `master` branch with:
+    ```
+    pod 'BMASliders', :git => 'https://github.com/badoo/BMASliders'
+    ```
 3. Run `pod install`
 
 ### Manually
