@@ -1,0 +1,14 @@
+PODS:
+  - BMASliders (1.0.0)
+
+DEPENDENCIES:
+  - BMASliders (from `..`)
+
+EXTERNAL SOURCES:
+  BMASliders:
+    :path: ..
+
+SPEC CHECKSUMS:
+  BMASliders: b623bb2e3ff891a5a33cffadec769ffcfcd9ad2c
+
+COCOAPODS: 0.36.0.rc.1
