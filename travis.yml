@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: Example/BMASlidersExample.xcworkspace
+xcode_scheme: Example
+xcode_sdk: iphonesimulator8.1
