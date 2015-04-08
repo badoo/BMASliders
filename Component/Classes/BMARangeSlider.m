@@ -383,6 +383,10 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
 - (CGFloat)overflowThresholdValue {
     CGFloat thresholdValue = self.maximumValue + [self overflowDistance] * (self.maximumValue - self.minimumValue) / [self rangeWidth];
 
+    if (!isfinite(thresholdValue)) {
+        thresholdValue = self.maximumValue;
+    }
+    
     return thresholdValue;
 }
 
