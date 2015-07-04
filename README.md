@@ -1,4 +1,4 @@
-# BMASliders [![Build Status](https://api.travis-ci.org/badoo/BMASliders.svg?branch=1.0.0)](https://travis-ci.org/badoo/BMASliders)
+# BMASliders [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://api.travis-ci.org/badoo/BMASliders.svg?branch=1.0.0)](https://travis-ci.org/badoo/BMASliders)
 `BMASliders` is a set of reusable sliders. It includes two kind of sliders, one with customizable ranges -`BMARangeSlider`- and a simpler one -`BMASlider`- along with its labeled counterparts -`BMALabeledRangeSlider` and `BMALabeledSlider`
 
 <div align="center">
