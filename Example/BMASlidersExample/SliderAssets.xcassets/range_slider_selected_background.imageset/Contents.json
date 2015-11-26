@@ -2,39 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
+      "filename" : "range_slider_selected_background.pdf",
       "resizing" : {
         "mode" : "3-part-horizontal",
         "center" : {
           "mode" : "stretch",
-          "width" : 2
+          "width" : 1
         },
         "capInsets" : {
-          "right" : 2,
-          "left" : 2
+          "right" : 1,
+          "left" : 1
         }
-      },
-      "idiom" : "universal",
-      "filename" : "range_slide_selected.png",
-      "scale" : "2x"
-    },
-    {
-      "resizing" : {
-        "mode" : "3-part-horizontal",
-        "center" : {
-          "mode" : "stretch",
-          "width" : 2
-        },
-        "capInsets" : {
-          "right" : 4,
-          "left" : 4
-        }
-      },
-      "idiom" : "universal",
-      "filename" : "range_slide_selected@3x.png",
-      "scale" : "3x"
+      }
     }
   ],
   "info" : {
