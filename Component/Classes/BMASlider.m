@@ -43,6 +43,7 @@
     if (self) {
         [self commonInit];
     }
+    
     return self;
 }
 
@@ -117,6 +118,7 @@
 
 - (void)updateStyle {
     self.handler.image = [self handlerImage];
+    self.handler.highlightedImage = [self handlerHighlightedImage];
     self.backgroundRangeImageView.image = [self unselectedLineImage];
     self.selectedRangeImageView.image = [self selectedLineImage];
 
@@ -156,8 +158,9 @@
 }
 
 - (void)placeHandler {
-    CGFloat centerX = self.slidingView.frame.origin.x + [self selectedRangeNormalizedLength] * self.slidingView.bounds.size.width;
-    self.handler.center = CGPointMake(centerX, self.backgroundRangeImageView.center.y);
+    CGFloat step = self.frame.size.width / (self.maximumValue + 1);
+    self.handler.center = CGPointMake(self.currentValue * step,
+                                      self.backgroundRangeImageView.center.y);
 }
 
 #pragma mark - Convenience accessors
@@ -218,6 +221,10 @@
 
 - (UIImage *)handlerImage {
     return [self.style handlerImage];
+}
+
+- (UIImage *)handlerHighlightedImage{
+    return [self.style handlerHighlightedImage];
 }
 
 - (CGFloat)lineHeight {
@@ -289,7 +296,7 @@
 }
 
 - (UIEdgeInsets)touchEdgeInsets {
-    return UIEdgeInsetsMake(-10., -10., -10., -10.);
+    return UIEdgeInsetsMake(-50., -50., -50., -50.);
 }
 
 - (UIEdgeInsets)slidingViewEdgeInsets {

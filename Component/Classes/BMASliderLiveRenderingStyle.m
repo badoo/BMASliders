@@ -66,4 +66,18 @@
     return thumbnail;
 }
 
+- (UIImage*)handlerHighlightedImage
+{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(28., 28.), NO, [[UIScreen mainScreen] scale]);
+    UIColor *color = [UIColor darkGrayColor];
+    
+    UIBezierPath *ovalPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0., 0., 28., 28.)];
+    [color setFill];
+    [ovalPath fill];
+    
+    UIImage *thumbnail = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return thumbnail;
+}
+
 @end
