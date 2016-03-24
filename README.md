@@ -103,3 +103,6 @@ If you like to live on the bleeding edge, you can use the `master` branch with:
 
 ## License
 Source code is distributed under MIT license.
+
+##Blog
+Read more on our [tech blog](http://techblog.badoo.com/) or explore our other [open source projects](https://github.com/badoo)
