@@ -302,7 +302,7 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
 - (void)setLowerBound:(CGFloat)value animated:(BOOL)animated {
     [self executeBlock:^{
         self.underflow = value < [self underflowThresholdValue];
-        _currentLowerValue = [self sanitizeValue:value withAdditionalMinimum:0. additionalMaximum:self.minimumDistance];
+        _currentLowerValue = [self sanitizeValue:value isUpper:NO withAdditionalMinimum:0. additionalMaximum:self.minimumDistance];
         
         if (_currentLowerValue > self.currentUpperValue) {
             self.currentUpperValue = _currentLowerValue;
@@ -317,7 +317,7 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
 - (void)setUpperBound:(CGFloat)value animated:(BOOL)animated {
     [self executeBlock:^{
         self.overflow = value > [self overflowThresholdValue];
-        _currentUpperValue = [self sanitizeValue:value withAdditionalMinimum:self.minimumDistance additionalMaximum:0.];
+        _currentUpperValue = [self sanitizeValue:value isUpper:YES withAdditionalMinimum:self.minimumDistance additionalMaximum:0.];
         if (_currentUpperValue < self.currentLowerValue) {
             self.currentLowerValue = _currentUpperValue;
         }
@@ -340,8 +340,25 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
     }
 }
 
-- (CGFloat)sanitizeValue:(CGFloat)value withAdditionalMinimum:(CGFloat)additionalMinimum additionalMaximum:(CGFloat)additionalMaximum {
-    value = [self stepValue:value];
+- (CGFloat)sanitizeValue:(CGFloat)value isUpper:(BOOL)isUpper withAdditionalMinimum:(CGFloat)additionalMinimum additionalMaximum:(CGFloat)additionalMaximum {
+    BOOL sanitiseStep = YES;
+    if(self.ignoreStepSanitizingOnExtremePoints)
+    {
+       if(isUpper && self.maximumValue == value)
+       {
+           sanitiseStep = NO;
+       }
+       else if(self.minimumValue == value)
+       {
+           sanitiseStep = NO;
+       }
+    }
+    
+    if(sanitiseStep)
+    {
+        value = [self stepValue:value];
+    }
+    
     value = MIN(value, self.maximumValue - additionalMaximum);
     value = MAX(value, self.minimumValue + additionalMinimum);
     return value;

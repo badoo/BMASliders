@@ -73,5 +73,6 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable CGFloat step;
 @property (nonatomic) IBInspectable CGFloat minimumDistance;
 @property (nonatomic, getter=isContinuous) IBInspectable BOOL continuous;
+@property (nonatomic) BOOL ignoreStepSanitizingOnExtremePoints;
 
 @end
