@@ -13,7 +13,7 @@
 - Configurable appearance
 
 ## How to use
-###BMALabeledRangeSlider
+### BMALabeledRangeSlider
 `BMALabeledRangeSlider` provides a range slider with a title and a detail of the selected range. You can configure many of its properties by using *Attributes inspector* in *Interface Builder*. Alternatively, you can initialize in code as follows:
 
 ```objectivec
@@ -58,7 +58,7 @@ For convenience, `BMASliders` support the UIAppearance protocol so you can easil
 [BMASlider appearance].style = [[BMASliderDefaultStyle alloc] init];
 ```
 
-###BMALabeledSlider
+### BMALabeledSlider
 `BMALabeledRangeSlider` provides a range slider with a title and a detail of the selected range. It works pretty much the same as `BMALabeledRangeSlider`, but it's got just a `currentValue`.
 
 ```objectivec
@@ -73,7 +73,7 @@ self.labeledSlider.rangeFormatter = self.myRangeFormatter;
 
 Note that `rangeFormatter` must again conform to `BMARangeFormatter` protocol. In this case however, the slider will set `hasLowerValue` to `false` and `currentValue` will be assigned to the `upperValue` property.
 
-###BMARangeSlider and BMASlider
+### BMARangeSlider and BMASlider
 These are the non-labeled counterparts of `BMALabeledRangeSlider` and `BMALabeledSlider`. They don't have any `title` or `rangeFormatter` so they are easier to configure and can be used to render your custom layouts.
 
 ## Live rendering
@@ -104,5 +104,5 @@ If you like to live on the bleeding edge, you can use the `master` branch with:
 ## License
 Source code is distributed under MIT license.
 
-##Blog
+## Blog
 Read more on our [tech blog](http://techblog.badoo.com/) or explore our other [open source projects](https://github.com/badoo)
