@@ -30,5 +30,6 @@
 - (UIImage *)unselectedLineImage;
 - (UIImage *)selectedLineImage;
 - (UIImage *)handlerImage;
+- (UIImage *)handlerHighlightedImage;
 
 @end

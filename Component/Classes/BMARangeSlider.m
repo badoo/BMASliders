@@ -131,7 +131,10 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
 
 - (void)updateStyle {
     self.lowerHandler.image = [self handlerImage];
+    self.lowerHandler.highlightedImage = [self handlerHighlightedImage];
     self.upperHandler.image = [self handlerImage];
+    self.upperHandler.highlightedImage = [self handlerHighlightedImage];
+    
     self.backgroundRangeImageView.image = [self unselectedLineImage];
     self.selectedRangeImageView.image = [self selectedLineImage];
 
@@ -178,8 +181,11 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
 }
 
 - (void)placeHandlers {
-    self.lowerHandler.center = CGPointMake(self.selectedRangeImageView.frame.origin.x, self.backgroundRangeImageView.center.y);
-    self.upperHandler.center = CGPointMake(CGRectGetMaxX(self.selectedRangeImageView.frame), self.backgroundRangeImageView.center.y);
+    CGFloat step = self.frame.size.width / (self.maximumValue + 1);
+    self.lowerHandler.center = CGPointMake(self.currentLowerValue * step,
+                                           self.backgroundRangeImageView.center.y);
+    self.upperHandler.center = CGPointMake(self.currentUpperValue * step,
+                                           self.backgroundRangeImageView.center.y);
 }
 
 #pragma mark - Convenience accessors
@@ -284,6 +290,10 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
     return [self.style handlerImage];
 }
 
+- (UIImage *)handlerHighlightedImage{
+    return [self.style handlerHighlightedImage];
+}
+
 - (CGFloat)lineHeight {
     return [self unselectedLineImage].size.height;
 }
@@ -371,7 +381,7 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
 }
 
 - (UIEdgeInsets)touchEdgeInsets {
-    return UIEdgeInsetsMake(-10., -10., -10., -10.);
+    return UIEdgeInsetsMake(-50., -50., -50., -50.);
 }
 
 - (UIEdgeInsets)slidingViewEdgeInsets {
